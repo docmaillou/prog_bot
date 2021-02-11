@@ -3,7 +3,7 @@ import youtube_dl
 import discord
 from . import *
 
-class music(commands.Cog):
+class Music(commands.Cog):
 
   def __init__(self,bot):
     self.bot = bot

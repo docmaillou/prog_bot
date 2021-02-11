@@ -10,7 +10,7 @@ bot = commands.Bot(command_prefix = '=')
 
 @bot.event
 async def on_ready():
-  bot.add_cog(music(bot))
+  bot.add_cog(Music(bot))
 
 @bot.event
 async def on_message(msg):
