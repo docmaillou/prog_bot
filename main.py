@@ -1,8 +1,8 @@
 import discord
 import os
 from discord.ext import commands
-from replit import db
 from cogs import *
+from replit import db
 import random
 
 bot = commands.Bot(command_prefix = '=')
@@ -10,6 +10,7 @@ bot = commands.Bot(command_prefix = '=')
 
 @bot.event
 async def on_ready():
+  print("BOT ACTIVATED")
   bot.add_cog(Music(bot))
 
 @bot.event

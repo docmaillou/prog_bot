@@ -14,7 +14,6 @@ replit = "^2.0.0"
 ffmpeg = "^1.4"
 utils = "^1.0.1"
 coloredlogs = "^15.0"
-Cogs = "^0.4.4"
 python-dotenv = "^0.15.0"
 
 [tool.poetry.dev-dependencies]

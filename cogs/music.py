@@ -15,13 +15,13 @@ class Music(commands.Cog):
   FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
 
   @commands.command(name='play')
-  async def play(ctx, url):
+  async def play(self,ctx, url):
     if url:
       channel = ctx.message.author.voice.channel
       if not channel:
           await ctx.send("You are not connected to a voice channel")
           return
-      voice = discord.utils.get(commands.voice_clients, guild=ctx.guild)
+      voice = ctx.guild.voice_client
       if voice and voice.is_connected():
           await voice.move_to(channel)
       else:
@@ -30,14 +30,14 @@ class Music(commands.Cog):
       with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=False)
         URL = info['formats'][0]['url']
-      voice = discord.utils.get(commands.voice_clients, guild=ctx.guild)
+      voice = ctx.guild.voice_client
       voice.play(discord.FFmpegPCMAudio(URL))
     else:
       ctx.send("Lien invalide")
 
   @commands.command(name='stop')
-  async def stop(ctx):
-    voice = discord.utils.get(commands.voice_clients, guild=ctx.guild)
+  async def stop(self,ctx):
+    voice = ctx.guild.voice_client
     voice.stop()
 
 
@@ -45,8 +45,8 @@ class Music(commands.Cog):
 
   #VIBINNNNNNNNNNNNN
 
-  #@commands.command()
-  #async def vibe(ctx):
-    #await ctx.send('<a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483>')
-    #await play(ctx,'https://www.youtube.com/watch?v=NUYvbT6vTPs&ab_channel=BilalG%C3%B6regen')
+  @commands.command()
+  async def vibe(self,ctx):
+    await ctx.send('<a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483><a:python3:808851026739986483>')
+    await self.play(ctx,'https://www.youtube.com/watch?v=NUYvbT6vTPs&ab_channel=BilalG%C3%B6regen')
   
