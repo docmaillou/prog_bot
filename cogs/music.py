@@ -1,7 +1,6 @@
 from discord.ext import commands
 import youtube_dl
 import discord
-from . import *
 
 class Music(commands.Cog):
 
@@ -39,10 +38,7 @@ class Music(commands.Cog):
   async def stop(self,ctx):
     voice = ctx.guild.voice_client
     voice.stop()
-
-
-
-
+    
   #VIBINNNNNNNNNNNNN
 
   @commands.command()
