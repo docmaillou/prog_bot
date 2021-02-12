@@ -27,6 +27,7 @@ async def on_ready():
   bot.add_cog(Maths(bot))
   bot.add_cog(Random(bot))
   bot.add_cog(Voice_client(bot))
+  
 @bot.event
 async def on_message(msg):
   #Ajoute un emoji sur le =save

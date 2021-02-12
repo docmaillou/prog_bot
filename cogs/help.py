@@ -1,5 +1,5 @@
 from discord import Color, Embed
-from discord.ext import commands, tasks
+from discord.ext import commands
 
 class Help(commands.MinimalHelpCommand):
     async def send_pages(self):
