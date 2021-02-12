@@ -44,10 +44,10 @@ class Random(commands.Cog):
       colour = discord.Colour.red()
     )
     embed.set_footer(text='MASSY PULLL')
-    embed.set_image(url='https://media.tenor.com/images/2ef0284a5bdb2a8c5346699814059570/tenor.gif')
+    embed.set_image(url='https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif')
     embed.set_thumbnail(url='https://media.tenor.com/images/2ef0284a5bdb2a8c5346699814059570/tenor.gif')
     embed.set_author(name='Charlo',
-    icon_url='https://media.tenor.com/images/2ef0284a5bdb2a8c5346699814059570/tenor.gif')
+    icon_url='https://i.imgur.com/cyzsgKt.gif')
     embed.add_field(name='Jvais te niquer', value='pull pull pull',inline=False)
     await ctx.send(embed=embed)
     await asyncio.sleep(5)
