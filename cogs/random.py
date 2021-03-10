@@ -49,6 +49,28 @@ class Random(commands.Cog):
     embed.set_author(name='Charlo',
     icon_url='https://i.imgur.com/cyzsgKt.gif')
     embed.add_field(name='Jvais te niquer', value='pull pull pull',inline=False)
+    await ctx.send("<@229649539601006595>")
+    await ctx.send(embed=embed)
+    await asyncio.sleep(5)
+    await ctx.send(embed=embed)
+    await asyncio.sleep(10)
+    await ctx.send(embed=embed)
+
+     #Pour que massy vienne m'aider à jouer
+  @commands.command()
+  async def massywar(self,ctx):
+    embed = discord.Embed(
+      title = 'COLD WAR',
+      description = 'PULL',
+      colour = discord.Colour.red()
+    )
+    embed.set_footer(text='MASSY PULLL')
+    embed.set_image(url='https://image.jeuxvideo.com/medias-sm/159972/1599723560-2484-jaquette-avant.jpeg')
+    embed.set_thumbnail(url='https://media.tenor.com/images/2ef0284a5bdb2a8c5346699814059570/tenor.gif')
+    embed.set_author(name='Charlo',
+    icon_url='https://i.imgur.com/cyzsgKt.gif')
+    embed.add_field(name='Jvais te niquer', value='pull pull pull',inline=False)
+    await ctx.send("<@229649539601006595>")
     await ctx.send(embed=embed)
     await asyncio.sleep(5)
     await ctx.send(embed=embed)

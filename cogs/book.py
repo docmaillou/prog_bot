@@ -10,6 +10,7 @@ class Book(commands.Cog):
         return True;
   #Save de la prog
   #Enregistré une note
+
   @commands.command()
   async def save(self,ctx,laDb,*,prog_msg):
     if laDb not in db.keys():
